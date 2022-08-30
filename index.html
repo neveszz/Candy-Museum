@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark navbar-expand-md py-0 fixed-top" id="mainNavbar">
+  <nav class="navbar navbar-dark navbar-expand-md py-0 fixed-top scrolled" id="mainNavbar">
     <a href="" class="navbar-brand">CANDY</a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
       <span class="navbar-toggler-icon"></span>
@@ -86,20 +86,34 @@
   
   <section class="container-fluid px-0 content">
     <div class="row align-items-center">
+      <div class="col-md-6 text-center">
+        <div class="row justify-content-center">
+          <div class="col-10 col-lg-8 blurb">
+            <h2>MUSEUM OF CANDY</h2>
+            <img src="images/lolli_icon.png" class="d-none d-lg-inline" alt="">
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt in animi cupiditate obcaecati consequatur, non minus vel soluta et explicabo harum reprehenderit excepturi perspiciatis eos dignissimos, sapiente culpa illum earum?
+            Quisquam expedita nobis mollitia quidem iusto facere? Non suscipit impedit ducimus similique voluptate quaerat exercitationem ut recusandae enim incidunt esse consequuntur, necessitatibus temporibus rerum nobis blanditiis itaque illo doloribus sint..</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="images/gumball.png" class="img-fluid" alt="">
+        </div>
+    </div>
+  </section>
+
+  <section class="container-fluid px-0 content">
+    <div class="row align-items-center">
       <div class="col-md-6 order-2 order-md-1">
-        <img src="images/milk.png" class="img-fluid" alt="">
+        <img src="images/sprinkles.png" class="img-fluid" alt="">
       </div>
       <div class="col-md-6 text-center order-1 order-md-2">
         <div class="row justify-content-center">
           <div class="col-10 col-lg-8 blurb">
             <h2>MUSEUM OF CANDY</h2>
             <img src="images/lolli_icon.png" class="d-none d-lg-inline" alt="">
-            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste natus, id assumenda tempore
-              quaerat voluptatibus. Ad ex praesentium nesciunt, repellat repellendus distinctio modi assumenda quaerat
-              quis itaque, sunt quidem impedit.
-              Voluptate dolor ea, iste dolorem ipsa obcaecati voluptas eveniet ab eius quae reiciendis inventore, fuga
-              cum delectus quia maxime laudantium magnam! Dolorem corrupti perspiciatis quos, eaque doloribus aperiam
-              placeat fuga.</p>
+            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum unde possimus impedit doloremque? Fugit nobis reprehenderit ab at in quis fugiat repellat ut molestias quas, eligendi possimus voluptate labore ratione.
+            Molestiae nobis error reiciendis rerum quae veniam nemo voluptate vel velit suscipit? Debitis rerum repudiandae qui quis incidunt. Eligendi porro iste repudiandae at explicabo suscipit rerum qui sequi harum enim!</p>
           </div>
         </div>
       </div>
@@ -117,7 +131,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
+    <script>
+      $(function () {
+          $(document).scroll(function () {
+              var $nav = $("#mainNavbar");
+              $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+          });
+      });
+  </script>
 </body>
 
 </html>
